@@ -3,7 +3,7 @@
 ## INFORMACIÓN DEL ESTUDIANTE  
 
 
-|**Datos**                                             |
+|**Datos**        |                                     |
 |-----------------|------------------------------------|
 | Nombre          | Jennifer Vanessa Balam López       |
 | Matrícula       | 22230690                           |
