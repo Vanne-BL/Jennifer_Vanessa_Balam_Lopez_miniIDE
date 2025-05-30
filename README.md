@@ -14,139 +14,136 @@
 
 ## ESTRUCTURA 
 
-
 miniIDE/
-├── app.py               # Aplicación principal Flask
-├── lexer.py             # Analisis léxico
-├── parser.py            # Analisis sintáctico
-├── README.md            # Intructivo
-├── turing_machine.py    # Máquina de Turing
+├── app.py # Aplicación principal Flask
+├── lexer.py # Analisis léxico
+├── parser.py # Analisis sintáctico
+├── README.md # Intructivo
+├── turing_machine.py # Máquina de Turing
 ├── templates/
-│   └── index.html       # Interfaz web
+│ └── index.html # Interfaz web
 └── static/
-    ├── style.css        # Estilos CSS
-    └── script.js        # Lógica frontend
+├── style.css # Estilos CSS
+└── script.js # Lógica frontend
 
-#  GUÍA DE EJECUCIÓN  
 
-**Requisitos previos**
-1. Asegurate de tener Python 3.10+ instalado
-2. Intala las dependencias necesarias: Flask 
+## GUÍA DE EJECUCIÓN  
+
+### Requisitos previos
+1. Asegúrate de tener Python 3.10+ instalado
+2. Instala las dependencias necesarias: Flask 
 3. Navegador web 
 
-# PASOS PARA EJECUCIÓN 
-1. Descomprimir el proyecto: Jennifer_Balam_miniIDE.zip o abrir la liga de github 
-2. Abrir la aplicación en Python : app.py
-3. Ejecutar: app.py
-4. Abrir en el navegador la liga proporcionada http://127.0.0.1:5000
+### Pasos para ejecución 
+1. Descomprimir el proyecto: `Jennifer_Balam_miniIDE.zip`
+2. Abrir la aplicación en Python: `app.py`
+3. Ejecutar: `app.py`
+4. Abrir en el navegador la liga proporcionada: `http://127.0.0.1:5000`
 
-# DICCIONARIO DE LENGUAJE 
+## DICCIONARIO DE LENGUAJE 
 
-|------------------------------------------------------|
-|                 **Palabras Clave**                   |
-|------------------------------------------------------|
-| Inicia condición      |        si                    |
-| Bloque verdadero      |     entonces                 |
-| Bloque falso          |       sino                   |
-| Inicia bucle          |     mientras                 |
-| Ejecuta bucle         |      hacer                   |
-| Termina bloque        |       fin                    |
-|-----------------------|------------------------------|
+### Palabras Clave
 
-|------------------------------------------------------|
-|                 **Operadores**                       |
-|------------------------------------------------------|
-|  Aritméticos             |        + - * /            |
-| Asignación/comparación   |         = == !=           |
-| Comparación              |      < > <= >=            |
-| Paréntesis               |         ( )               |
-| Bloques de código        |         { }               |
-| Fin de línea             |          ;                |
-|--------------------------|---------------------------|
+| Inicia condición      | si          |
+|-----------------------|-------------|
+| Bloque verdadero      | entonces    |
+| Bloque falso          | sino        |
+| Inicia bucle          | mientras    |
+| Ejecuta bucle         | hacer       |
+| Termina bloque        | fin         |
 
-|------------------------------------------------------|
-|                 **Tipos de Datos**                   |
-|------------------------------------------------------|
-| Números enteros          |          123              |
-| Números decimales        |          12.34            |
-| Cadenas                  |         "texto"           |
-| Identificadores          |         variable          |
-|--------------------------|---------------------------|
+### Operadores
 
-# TOKENS
+| Tipo                     | Símbolos               |
+|--------------------------|------------------------|
+| Aritméticos              | + - * /                |
+| Asignación/comparación   | = == !=                |
+| Comparación              | < > <= >=              |
+| Paréntesis               | ( )                    |
+| Bloques de código        | { }                    |
+| Fin de línea             | ;                      |
 
-| ---------- | ------------------------------------------------------------ |
-| **DATOS**  | **Descripción**                                              |
-| ---------- | ------------------------------------------------------------ |
-|   NUMBER   | Números enteros o decimales                                  |
-|  OPERATOR  | Operadores aritméticos y relacionales                        |
-|   STRING   | Cadenas de texto entre comillas dobles                       |                 
-|   KEYWORD  | Palabras reservadas del lenguaje                             |
-|   SYMBOL   | Símbolos y delimitadores                                     |
-|   IDENT    | Identificadores                                              |
-| ---------- | ------------------------------------------------------------ |
+### Tipos de Datos
 
-# MANEJO DE ERRORES 
-- Léxicos
-1. Caracteres no válidos: Cualquier símbolo que no pertenezca al lenguaje.
-   - Ejemplo: x = @5;    (el carácter @ no es válido)
-   - Corrección sugerida: Carácter no válido: @ - Remueva el símbolo no reconocido
-2. Strings no cerrados: Comillas sin cerrar
-   - Ejemplo: mensaje = "Hola mundo;
-   - Corrección sugerida: Cierre el string con comillas: "texto"
-3. Comentarios mal formados: 
-   - Ejemplo: / esto no es un comentario válido
-   - Corrección sugerida: Use // para comentarios de una línea
+| Tipo                    | Ejemplo                 |
+|-------------------------|-------------------------|
+| Números enteros         | 123                     |
+| Números decimales       | 12.34                   |
+| Cadenas                 | "texto"                 |
+| Identificadores         | variable                |
 
-- Sintáctico
-1. Falta de punto y coma:
-   - Ejemplo: x = 5
-   - Error: Falta ; al final de la expresión
-   - Corrección: x = 5;
+## TOKENS
 
-2. Condicionales mal formados:
-   - Ejemplo: si x > 5) entonces y=10;fin
-   - Error: Falta ( después de si 
-   - Corrección: si (x > 5) entonces y=10;fin
+| **TOKEN** | **Descripción**                                             |
+|----------|-------------------------------------------------------------|
+| NUMBER   | Números enteros o decimales                                 |
+| OPERATOR | Operadores aritméticos y relacionales                       |
+| STRING   | Cadenas de texto entre comillas dobles                      |
+| KEYWORD  | Palabras reservadas del lenguaje                            |
+| SYMBOL   | Símbolos y delimitadores                                    |
+| IDENT    | Identificadores                                             |
 
-3. Paréntesis no balanceados:
-   - Ejemplo: y = (5 + (3 * 2);
-   - Error: Falta ) para cerrar la expresión
-   - Corrección: y = (5 + (3 * 2));
+## MANEJO DE ERRORES 
 
-4. Bloques no abierto:
-   - Ejemplo: mientras (x < 10) hacer  x = x + 1;}
-   - Error: Falta { para abrir el bloque
-   - Corrección: mientras (x < 10) hacer { x = x + 1; }
+### Léxicos
 
-5. Estructuras incompletas:
-   - Ejemplo: si (cond) entonces { }
-   - Error: Falta fin para cerrar el condicional
-   - Corrección: si (cond) entonces { } fin
+1. **Caracteres no válidos**  
+   - Ejemplo: `x = @5;`  
+   - Corrección: Carácter no válido: `@` - Remueva el símbolo no reconocido
 
-- Máquina de Turing
+2. **Strings no cerrados**  
+   - Ejemplo: `mensaje = "Hola mundo;`  
+   - Corrección: Cierre el string con comillas: `"texto"`
 
-1. Cadena no binaria:
-   - Ejemplo: 012
-   - Error: La cadena debe contener solo 0s y 1s
+3. **Comentarios mal formados**  
+   - Ejemplo: `/ esto no es un comentario válido`  
+   - Corrección: Use `//` para comentarios de una línea
 
-2. No comienza con 0:
-   - Ejemplo: 1010
-   - Error: La cadena debe comenzar con 0
+### Sintácticos
 
-3. Dos símbolos iguales consecutivos:
-   - Ejemplo: 0011
-   - Error: Los símbolos 2 y 3 son iguales (0)
+1. **Falta de punto y coma**  
+   - Ejemplo: `x = 5`  
+   - Corrección: `x = 5;`
 
-4. No termina con 1:
-   - Ejemplo: 0100
-   - Error: La cadena debe terminar con 1
+2. **Condicionales mal formados**  
+   - Ejemplo: `si x > 5) entonces y=10;fin`  
+   - Corrección: `si (x > 5) entonces y=10;fin`
 
-5. Transición no definida:
-   - Ejemplo: Cadena vacía
-   - Error: Transición no definida para estado q0 y símbolo _
+3. **Paréntesis no balanceados**  
+   - Ejemplo: `y = (5 + (3 * 2);`  
+   - Corrección: `y = (5 + (3 * 2));`
 
-# EJEMPLOS VALIDOS
+4. **Bloques no abiertos**  
+   - Ejemplo: `mientras (x < 10) hacer  x = x + 1;}`  
+   - Corrección: `mientras (x < 10) hacer { x = x + 1; }`
+
+5. **Estructuras incompletas**  
+   - Ejemplo: `si (cond) entonces { }`  
+   - Corrección: `si (cond) entonces { } fin`
+
+### Máquina de Turing
+
+1. **Cadena no binaria**  
+   - Ejemplo: `012`  
+   - Corrección: La cadena debe contener solo 0s y 1s
+
+2. **No comienza con 0**  
+   - Ejemplo: `1010`  
+   - Corrección: La cadena debe comenzar con 0
+
+3. **Dos símbolos iguales consecutivos**  
+   - Ejemplo: `0011`  
+   - Corrección: Los símbolos 2 y 3 son iguales (0)
+
+4. **No termina con 1**  
+   - Ejemplo: `0100`  
+   - Corrección: La cadena debe terminar con 1
+
+5. **Transición no definida**  
+   - Ejemplo: Cadena vacía  
+   - Corrección: Transición no definida para estado q0 y símbolo `_`
+
+## EJEMPLOS VÁLIDOS
 
 **Lexico**
 1. 42:
