@@ -1,19 +1,19 @@
-# PROYECTO INTEGRADOR - MINI IDE WEB  
+# PROYECTO INTEGRADOR - MINI IDE WEB   
 
-#  INFORMACIÓN DEL ESTUDIANTE  
+## INFORMACIÓN DEL ESTUDIANTE  
 
-
-|                   **Datos**                          |
+|-----------------|------------------------------------|
+| **Datos**       |                                    |
 |-----------------|------------------------------------|
 | Nombre          | Jennifer Vanessa Balam López       |
 | Matrícula       | 22230690                           |
 | Materia         | Leng. Autómatas 1                  |
 | Profesor        | Kevin David Molina Gómez           |
 | Fecha de entrega| 30 de mayo de 2025                 |
+|-----------------|------------------------------------|
 
+## ESTRUCTURA 
 
-
-# ESTRUCTURA 
 
 miniIDE/
 ├── app.py               # Aplicación principal Flask
