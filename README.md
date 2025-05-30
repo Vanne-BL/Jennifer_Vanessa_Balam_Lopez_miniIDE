@@ -3,7 +3,7 @@
 ## INFORMACIÓN DEL ESTUDIANTE  
 
 
-| **Datos**       |                                    |
+|                    **Datos**                         |
 |-----------------|------------------------------------|
 | Nombre          | Jennifer Vanessa Balam López       |
 | Matrícula       | 22230690                           |
@@ -42,9 +42,8 @@ miniIDE/
 
 ## DICCIONARIO DE LENGUAJE 
 
-### Palabras Clave
 
-| Inicia condición      | si          |
+|          **Palabras Clave**         |
 |-----------------------|-------------|
 | Bloque verdadero      | entonces    |
 | Bloque falso          | sino        |
