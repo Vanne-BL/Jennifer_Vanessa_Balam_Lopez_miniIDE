@@ -25,7 +25,7 @@
 3. Navegador web 
 
 ### Pasos para ejecución 
-1. Descomprimir el proyecto: `Jennifer_Balam_miniIDE.zip`
+1. Descomprimir el proyecto: `Jennifer_Balam_miniIDE.zip` o entrar a la liga de github
 2. Abrir la aplicación en Python: `app.py`
 3. Ejecutar: `app.py`
 4. Abrir en el navegador la liga proporcionada: `http://127.0.0.1:5000`
