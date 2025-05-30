@@ -51,9 +51,8 @@ miniIDE/
 | Ejecuta bucle         | hacer       |
 | Termina bloque        | fin         |
 
-### Operadores
 
-| Tipo                     | Símbolos               |
+|                      ### Operadores               |
 |--------------------------|------------------------|
 | Aritméticos              | + - * /                |
 | Asignación/comparación   | = == !=                |
