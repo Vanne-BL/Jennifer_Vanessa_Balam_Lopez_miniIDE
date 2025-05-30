@@ -3,7 +3,7 @@
 ## INFORMACIÓN DEL ESTUDIANTE  
 
 
-|**Datos**        |                                     |
+|**Datos**        |   **Descripción**                  |
 |-----------------|------------------------------------|
 | Nombre          | Jennifer Vanessa Balam López       |
 | Matrícula       | 22230690                           |
@@ -14,17 +14,7 @@
 
 ## ESTRUCTURA 
 
-miniIDE/
-├── app.py # Aplicación principal Flask
-├── lexer.py # Analisis léxico
-├── parser.py # Analisis sintáctico
-├── README.md # Intructivo
-├── turing_machine.py # Máquina de Turing
-├── templates/
-│ └── index.html # Interfaz web
-└── static/
-├── style.css # Estilos CSS
-└── script.js # Lógica frontend
+![image](https://github.com/user-attachments/assets/b6b7008a-ea3b-4ecd-a072-f08920b29be5)
 
 
 ## GUÍA DE EJECUCIÓN  
@@ -43,7 +33,7 @@ miniIDE/
 ## DICCIONARIO DE LENGUAJE 
 
 
-|**Palabras Clave**     |             |
+|**Palabras Clave**     | **Descripción** |
 |-----------------------|-------------|
 | Bloque verdadero      | entonces    |
 | Bloque falso          | sino        |
@@ -52,7 +42,7 @@ miniIDE/
 | Termina bloque        | fin         |
 
 
-| **Operadores             |                        |
+| **Operadores**           |    **Descripción**                    |
 |--------------------------|------------------------|
 | Aritméticos              | + - * /                |
 | Asignación/comparación   | = == !=                |
@@ -62,7 +52,7 @@ miniIDE/
 | Fin de línea             | ;                      |
 
 
-| **Tipo  de datos**      |                         |
+| **Tipo  de datos**      |     **Descripción**                    |
 |-------------------------|-------------------------|
 | Números enteros         | 123                     |
 | Números decimales       | 12.34                   |
@@ -142,51 +132,68 @@ miniIDE/
 
 ## EJEMPLOS VÁLIDOS
 
-**Lexico**
-1. 42:
-2. "Hola"
-3. x != y
-4. 2+3*4-7/9
+### Lexico
+- 42:
+- "Hola"
+- x != y
+- 2+3*4-7/9
 
-**Sintactico**
-1. edad = 25;
-2. total = (precio * cantidad) + iva;
-3. mientras (i == 0) hacer {
+  ![image](https://github.com/user-attachments/assets/96c3dbc3-c3a5-4e82-83d2-52690db17449)
+
+
+### Sintactico
+- edad = 25;
+- total = (precio * cantidad) + iva;
+- mientras (i == 0) hacer {
     i = i + 1;
 }
-4. si (edad >= 18) entonces {
+- si (edad >= 18) entonces {
     status = "adulto"; 
 } sino {
     status = "menor";  
 } fin
 
-**Maquina de turing**
-1. 01
-2. 0101
-3. 010101
-4. 01010101
+![image](https://github.com/user-attachments/assets/b252518d-a559-49a1-811c-18726743a6e6)
+
+
+### Maquina de turing
+- 01
+- 0101
+- 010101
+- 01010101
+
+![image](https://github.com/user-attachments/assets/ba230465-ef8f-438f-8b9c-f0ee4dd9ea31)
 
 
 # EJEMPLOS NO VALIDOS
-**Lexico**
-1. y=x#2;
-2. msg = "Hola;
-3. x=12.23.56;
-4. var&iable=3;
+### Lexico
+- y=x#2;
+- msg = "Hola;
+- x=12.23.56;
+- var&iable=3;
 
-**Sintactico**
-1. si (x > 5) entonces {
+![image](https://github.com/user-attachments/assets/7c51fb91-d5c9-4bd6-bc9a-c1f814ba2952)
+
+
+### Sintactico
+- si (x > 5) entonces {
     y = 10;
 }  
-2. mensaje = "Hola mundo;"
-3. si (x = 5) entonces {  
+- mensaje = "Hola mundo;"
+-  si (x = 5) entonces {  
     z = 20;
 } fin
-4. resultado = a == b;  
+- resultado = a == b;  
 
-**Maquina de turing**
-1. 0110
-2. 10101
-3. 110100
-4. 1011101
+![image](https://github.com/user-attachments/assets/22d5dfc8-cbcc-41b7-88cb-523469c1196e)
+
+
+### Maquina de turing
+- 0110
+- 10101
+- 110100
+- 1011101
+
+![image](https://github.com/user-attachments/assets/aa8a5561-d037-4462-9452-27406208ea4c)
+
 
