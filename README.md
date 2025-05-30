@@ -43,7 +43,7 @@ miniIDE/
 ## DICCIONARIO DE LENGUAJE 
 
 
-|          **Palabras Clave**         |
+|**Palabras Clave**     |             |
 |-----------------------|-------------|
 | Bloque verdadero      | entonces    |
 | Bloque falso          | sino        |
@@ -52,7 +52,7 @@ miniIDE/
 | Termina bloque        | fin         |
 
 
-|                      ### Operadores               |
+| **Operadores             |                        |
 |--------------------------|------------------------|
 | Aritméticos              | + - * /                |
 | Asignación/comparación   | = == !=                |
@@ -61,9 +61,8 @@ miniIDE/
 | Bloques de código        | { }                    |
 | Fin de línea             | ;                      |
 
-### Tipos de Datos
 
-| Tipo                    | Ejemplo                 |
+| **Tipo  de datos**      |                         |
 |-------------------------|-------------------------|
 | Números enteros         | 123                     |
 | Números decimales       | 12.34                   |
@@ -72,7 +71,7 @@ miniIDE/
 
 ## TOKENS
 
-| **TOKEN** | **Descripción**                                             |
+| **Datos**| **Descripción**                                             |
 |----------|-------------------------------------------------------------|
 | NUMBER   | Números enteros o decimales                                 |
 | OPERATOR | Operadores aritméticos y relacionales                       |
