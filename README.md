@@ -2,7 +2,7 @@
 
 #  INFORMACIÓN DEL ESTUDIANTE  
 
-|------------------------------------------------------|
+
 |                   **Datos**                          |
 |-----------------|------------------------------------|
 | Nombre          | Jennifer Vanessa Balam López       |
@@ -10,7 +10,7 @@
 | Materia         | Leng. Autómatas 1                  |
 | Profesor        | Kevin David Molina Gómez           |
 | Fecha de entrega| 30 de mayo de 2025                 |
-|-----------------|------------------------------------|
+
 
 
 # ESTRUCTURA 
