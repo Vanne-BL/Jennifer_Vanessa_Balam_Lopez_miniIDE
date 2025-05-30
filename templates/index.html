@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROYECTO INTEGRADOR</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/dracula.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>MINI IDE WEB</h1>
+            <div class="student-info">
+                <p><strong>Nombre:</strong> {{ student_info.Nombre }}</p>
+                <p><strong>Matrícula:</strong> {{ student_info.Matricula }}</p>
+                <p><strong>Materia:</strong> {{ student_info.Materia }}</p>
+                <p><strong>Profesor:</strong> {{ student_info.Profesor }}</p>
+            </div>
+        </header>
+        
+        <div class="ide-container">
+            <div class="main-content">
+                <div class="code-editor">
+                    <textarea id="editor">x = 4;</textarea>
+                </div>
+                
+                <div class="controls">
+                    <button id="lexical-btn">
+                        <span class="icon">🔍</span> Análisis Léxico
+                    </button>
+                    <button id="syntax-btn">
+                        <span class="icon">📝</span> Análisis Sintáctico
+                    </button>
+                    <button id="turing-btn">
+                        <span class="icon">⚙️</span> Maquina De Turing
+                    </button>
+                    <button id="clear-btn">
+                        <span class="icon">🧹</span> Limpiar Todo
+                    </button>
+                </div>
+                
+                <div class="output-tabs">
+                    <div class="tab-buttons">
+                        <button class="tab-btn active" data-tab="tokens">
+                            <span class="icon">📊</span> Tokens
+                        </button>
+                        <button class="tab-btn" data-tab="errors">
+                            <span class="icon">❌</span> Errores
+                        </button>
+                        <button class="tab-btn" data-tab="turing">
+                            <span class="icon">🤖</span> ROBOT
+                        </button>
+                    </div>
+                    
+                    <div class="tab-content active" id="tokens-tab">
+                        <h3>Tabla de Tokens</h3>
+                        <table id="tokens-table">
+                            <thead>
+                                <tr>
+                                    <th>Tipo</th>
+                                    <th>Valor</th>
+                                    <th>Línea</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="tab-content" id="errors-tab">
+                        <h3>Errores Detectados</h3>
+                        <table id="errors-table">
+                            <thead>
+                                <tr>
+                                    <th>Línea</th>
+                                    <th>Mensaje</th>
+                                    <th>Solución Sugerida</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td colspan="3" class="no-errors">No se encontraron errores</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="tab-content" id="turing-tab">
+                        <h3>Validador de ROBOT</h3>
+                        <div class="turing-input">
+                            <label for="turing-input">Cadena binaria (ej: 0101):</label>
+                            <input type="text" id="turing-input" value="0101" pattern="[01]+">
+                            <button id="run-turing-btn">Validar</button>
+                        </div>
+                        <div id="turing-result" class="rejected">NO ES ROBOT</div>
+                        <div id="turing-explanation">
+                            <p>La Máquina de Turing validó que la cadena <strong>"0101"</strong> no cumple con el patrón ROBOT (alternancia estricta de 0 y 1).</p>
+                            <p>Una cadena ROBOT válida debe:</p>
+                            <ul>
+                                <li>Empezar con 0</li>
+                                <li>Alternar perfectamente entre 0 y 1</li>
+                                <li>Terminar con 1</li>
+                                <li>Tener igual número de 0s y 1s</li>
+                            </ul>
+                        </div>
+                        <div id="turing-path">
+                            <div class="path-step">Ingresa una cadena y haz clic en Validar</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="dictionary-panel">
+                <h3>Diccionario de Lenguaje</h3>
+                <div class="dictionary-section">
+                    <h4>Palabras Clave</h4>
+                    <ul>
+                        <li><code>si</code> - Inicia condición</li>
+                        <li><code>entonces</code> - Bloque verdadero</li>
+                        <li><code>sino</code> - Bloque falso</li>
+                        <li><code>mientras</code> - Inicia bucle</li>
+                        <li><code>hacer</code> - Ejecuta bucle</li>
+                        <li><code>fin</code> - Termina bloque</li>
+                    </ul>
+                </div>
+                
+                <div class="dictionary-section">
+                    <h4>Operadores</h4>
+                    <ul>
+                        <li><code>+ - * /</code> - Aritméticos</li>
+                        <li><code>= == !=</code> - Asignación/comparación</li>
+                        <li><code>&lt; &gt; &lt;= &gt;=</code> - Comparación</li>
+                        <li><code>( )</code> - Paréntesis</li>
+                        <li><code>{ }</code> - Bloques de código</li>
+                        <li><code>;</code> - Fin de línea</li>
+                    </ul>
+                </div>
+                
+                <div class="dictionary-section">
+                    <h4>Tipos de Datos</h4>
+                    <ul>
+                        <li><code>123</code> - Números enteros</li>
+                        <li><code>12.34</code> - Números decimales</li>
+                        <li><code>"texto"</code> - Cadenas</li>
+                        <li><code>variable</code> - Identificadores</li>
+                    </ul>
+                </div>
+                
+                <div class="dictionary-section">
+                    <h4>Ejemplos Válidos</h4>
+                    <pre>
+// Asignación
+x = 5;
+
+// Condicional
+si (x > 0) entonces {
+    y = 10;
+} sino {
+    y = 0;
+}fin
+
+// Bucle
+mientras (i < 10) hacer {
+    i = i + 1;
+}</pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/clike/clike.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/addon/edit/matchbrackets.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
