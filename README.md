@@ -34,15 +34,15 @@
 
 
 |**Palabras Clave**     | **Descripción** |
-|-----------------------|-------------|
-| Bloque verdadero      | entonces    |
-| Bloque falso          | sino        |
-| Inicia bucle          | mientras    |
-| Ejecuta bucle         | hacer       |
-| Termina bloque        | fin         |
+|-----------------------|-----------------|
+| Bloque verdadero      | entonces        |
+| Bloque falso          | sino            |
+| Inicia bucle          | mientras        |
+| Ejecuta bucle         | hacer           |
+| Termina bloque        | fin             |
 
 
-| **Operadores**           |    **Descripción**                    |
+| **Operadores**           |    **Descripción**     |
 |--------------------------|------------------------|
 | Aritméticos              | + - * /                |
 | Asignación/comparación   | = == !=                |
@@ -52,7 +52,7 @@
 | Fin de línea             | ;                      |
 
 
-| **Tipo  de datos**      |     **Descripción**                    |
+| **Tipo  de datos**      |     **Descripción**     |
 |-------------------------|-------------------------|
 | Números enteros         | 123                     |
 | Números decimales       | 12.34                   |
